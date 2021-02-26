@@ -1,14 +1,13 @@
 class ListNode {
     constructor(data) {
         this.data = data
-        this.next = null
-        this.divisa = null                
+        this.next = null          
     }
 }
 
 export default class List{
-    constructor(){
-        this.head = null
+    constructor(data){
+        this.head = new ListNode(data)
     }
 
     push(data){
@@ -23,6 +22,12 @@ export default class List{
             current.next = new ListNode(data)
             return current.next
         }
+    }
+
+    pushArray(array){
+        array.forEach(estado => {
+            this.push(estado)
+        });
     }
 
     delete(data){
@@ -56,20 +61,6 @@ export default class List{
             }
         } catch (error) {
             throw "Value does not match with any value on the list."
-        }
-    }
-
-    pushDivisa(data){
-        if(this.head.divisa === null)
-            this.head.divisa = new ListNode(data)
-        else{
-            let current = this.head
-            while(current.divisa !== null){
-                current = current.divisa
-            }
-
-            current.divisa = new ListNode(data)
-            return current.divisa
         }
     }
 
