@@ -60,10 +60,10 @@ export default class List{
     }
 
     pushDivisa(data){
-        if(this.divisa === null)
-            this.divisa = new ListNode(data)
+        if(this.head.divisa === null)
+            this.head.divisa = new ListNode(data)
         else{
-            let current = this.divisa
+            let current = this.head
             while(current.divisa !== null){
                 current = current.divisa
             }
