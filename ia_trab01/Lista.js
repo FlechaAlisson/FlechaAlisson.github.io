@@ -69,7 +69,7 @@ export default class List{
             }
 
             current.divisa = new ListNode(data)
-            return current.next
+            return current.divisa
         }
     }
 
