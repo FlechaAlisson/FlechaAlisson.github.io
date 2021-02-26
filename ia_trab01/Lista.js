@@ -20,6 +20,7 @@ export default class List{
             }
 
             current.next = new ListNode(data)
+            return current.next
         }
     }
 
