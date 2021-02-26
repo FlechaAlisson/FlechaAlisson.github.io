@@ -58,5 +58,19 @@ export default class List{
         }
     }
 
+    pushDivisa(data){
+        if(this.divisas === null)
+            this.divisas = new ListNode(data)
+        else{
+            let current = this.divisas
+            while(current.next !== null){
+                current = current.next
+            }
+
+            current.next = new ListNode(data)
+            return current.next
+        }
+    }
+
 }
 
